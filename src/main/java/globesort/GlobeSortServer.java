@@ -97,7 +97,7 @@ public class GlobeSortServer {
             responseObserver.onNext(response);
             responseObserver.onCompleted();
 	    long end=System.currentTimeMillis();
-	    System.out.println("Time to sort is "+(end-start)/1000);
+	    System.out.println("Sorting time is "+(end-start)/1000+" s");
         }
     }
 }
