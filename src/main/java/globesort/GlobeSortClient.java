@@ -52,7 +52,7 @@ public class GlobeSortClient {
 	long start=System.currentTimeMillis();
         IntArray response = serverStub.sortIntegers(request);
 	long end=System.currentTimeMillis();
-	System.out.println("Applicarion Throughput time is "+(end-start)/1000)+" s");
+	System.out.println("Applicarion Throughput time is "+(end-start)/1000+" s");
 	System.out.println("Number of Integer sorted per second is "+num/((end-start)/1000));
         System.out.println("Sorted array");
     }
