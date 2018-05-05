@@ -43,7 +43,7 @@ public class GlobeSortClient {
 	long startping=System.currentTimeMillis();
         serverStub.ping(Empty.newBuilder().build());
 	long endping=System.currentTimeMillis();
-	System.out.println("Ping time is "+(endping-startping)/1000+" s");
+	System.out.println("Ping time is "+(endping-startping)+" ms");
         System.out.println("Ping successful.");
 
         System.out.println("Requesting server to sort array");
@@ -52,7 +52,7 @@ public class GlobeSortClient {
 	long start=System.currentTimeMillis();
         IntArray response = serverStub.sortIntegers(request);
 	long end=System.currentTimeMillis();
-	System.out.println("Applicarion Throughput time is "+(end-start)/1000+" s");
+	System.out.println("Applicarion Throughput time is "+(end-start)+" ms");
 	System.out.println("Number of Integer sorted per second is "+num/((end-start)/1000));
         System.out.println("Sorted array");
     }
@@ -105,7 +105,7 @@ public class GlobeSortClient {
             client.shutdown();
         }
 	long end=System.currentTimeMillis();
-	System.out.println("Time to setup connection and transfer is "+(end-start)/1000+" s");
+	System.out.println("Time to setup connection and transfer is "+(end-start)+" ms");
     }
 }
 
